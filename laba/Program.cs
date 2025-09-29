@@ -13,7 +13,6 @@ namespace GameApp
         /// <summary>
         /// Точка входа консольного приложения.
         /// </summary>
-        /// <param name="args">Аргументы командной строки (не используются).</param>
         public static void Main(string[] args)
         {
             var logic = new GameLogic();

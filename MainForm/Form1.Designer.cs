@@ -43,9 +43,6 @@ namespace GameApp.UI
             btnTopRated.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             ((System.ComponentModel.ISupportInitialize)dgvGames).BeginInit();
             SuspendLayout();
-            // 
-            // dgvGames
-            // 
             dgvGames.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvGames.Location = new Point(12, 12);
             dgvGames.Name = "dgvGames";
@@ -54,62 +51,41 @@ namespace GameApp.UI
             dgvGames.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvGames.Size = new Size(560, 300);
             dgvGames.TabIndex = 0;
-            // 
-            // cbFilterGenre
-            // 
             cbFilterGenre.DropDownStyle = ComboBoxStyle.DropDownList;
             cbFilterGenre.Location = new Point(12, 320);
             cbFilterGenre.Name = "cbFilterGenre";
             cbFilterGenre.Size = new Size(150, 40);
             cbFilterGenre.TabIndex = 1;
-            // 
-            // btnAdd
-            // 
             btnAdd.Location = new Point(12, 350);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 4;
             btnAdd.Text = "Добавить";
             btnAdd.Click += btnAdd_Click;
-            // 
-            // btnEdit
-            // 
             btnEdit.Location = new Point(95, 350);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(75, 23);
             btnEdit.TabIndex = 5;
             btnEdit.Text = "Редактировать";
             btnEdit.Click += btnEdit_Click;
-            // 
-            // btnDelete
-            // 
             btnDelete.Location = new Point(180, 350);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 6;
             btnDelete.Text = "Удалить";
             btnDelete.Click += btnDelete_Click;
-            // 
-            // btnFilter
-            // 
             btnFilter.Location = new Point(170, 320);
             btnFilter.Name = "btnFilter";
             btnFilter.Size = new Size(75, 23);
             btnFilter.TabIndex = 2;
             btnFilter.Text = "Фильтр";
             btnFilter.Click += btnFilter_Click;
-            // 
-            // btnTopRated
-            // 
             btnTopRated.Location = new Point(250, 320);
             btnTopRated.Name = "btnTopRated";
             btnTopRated.Size = new Size(120, 23);
             btnTopRated.TabIndex = 3;
             btnTopRated.Text = "Топ 3";
             btnTopRated.Click += btnTopRated_Click;
-            // 
-            // MainForm
-            // 
             ClientSize = new Size(1021, 551);
             Controls.Add(dgvGames);
             Controls.Add(cbFilterGenre);

@@ -3,7 +3,7 @@
 ///Представление модели игры, включающее ID, Name, Genre, Rating
 ///</summary>
 {
-    public class Class1
+    public class Models
     {
         ///<summary>
         ///ID игры

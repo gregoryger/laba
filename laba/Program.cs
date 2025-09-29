@@ -92,7 +92,7 @@ namespace GameApp
                     break;
                 Console.WriteLine("Ошибка: рейтинг должен быть числом от 0 до 10.");
             }
-            var game = new Models.Models { Name = name, Genre = genre, Rating = rating };
+            var game = new Models.Game { Name = name, Genre = genre, Rating = rating };
             logic.AddGame(game);
             Console.WriteLine($"Игра добавлена. ID = {game.Id}");
         }

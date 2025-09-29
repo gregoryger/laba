@@ -10,7 +10,7 @@ namespace Logic
     /// </summary>
     public class GameLogic
     {
-        private readonly List<Models.Models> games = new List<Models.Models>();
+        private readonly List<Models.Game> games = new List<Models.Game>();
         private int nextId = 1;
 
         /// <summary>
@@ -18,7 +18,7 @@ namespace Logic
         /// </summary>
         /// <param name="game">Новая игра для добавления (без установленного Id).</param>
         /// <returns>Добавленная игра с присвоенным идентификатором.</returns>
-        public Models.Models AddGame(Models.Models game)
+        public Models.Game AddGame(Models.Game game)
         {
             if (game == null) throw new ArgumentNullException(nameof(game));
             game.Id = nextId++;
@@ -43,10 +43,10 @@ namespace Logic
         /// Возвращает список всех игр.
         /// </summary>
         /// <returns>Список всех игр.</returns>
-        public List<Models.Models> GetAllGames()
+        public List<Models.Game> GetAllGames()
         {
             // Возвращаем копию списка, чтобы внешние модификации не повлияли на внутренний список.
-            return new List<Models.Models>(games);
+            return new List<Models.Game>(games);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Logic
         /// </summary>
         /// <param name="id">Идентификатор искомой игры.</param>
         /// <returns>Игру с заданным Id, либо null, если не найдена.</returns>
-        public Models.Models GetGameById(int id)
+        public Models.Game GetGameById(int id)
         {
             return games.FirstOrDefault(g => g.Id == id);
         }
@@ -64,7 +64,7 @@ namespace Logic
         /// </summary>
         /// <param name="game">Обновлённая игра (должна иметь корректный Id).</param>
         /// <returns>True, если игра найдена и обновлена, иначе False.</returns>
-        public bool UpdateGame(Models.Models game)
+        public bool UpdateGame(Models.Game game)
         {
             if (game == null) throw new ArgumentNullException(nameof(game));
             var index = games.FindIndex(g => g.Id == game.Id);
@@ -78,7 +78,7 @@ namespace Logic
         /// </summary>
         /// <param name="genre">Жанр для фильтрации.</param>
         /// <returns>Список игр указанного жанра.</returns>
-        public List<Models.Models> FilterByGenre(string genre)
+        public List<Models.Game> FilterByGenre(string genre)
         {
             if (genre == null) throw new ArgumentNullException(nameof(genre));
             return games
@@ -91,7 +91,7 @@ namespace Logic
         /// </summary>
         /// <param name="count">Максимальное число игр в топе.</param>
         /// <returns>Список игр с наивысшими рейтингами (не более count штук).</returns>
-        public List<Models.Models> GetTopRatedGames(int count)
+        public List<Models.Game> GetTopRatedGames(int count)
         {
             if (count < 1) throw new ArgumentOutOfRangeException(nameof(count));
             return games

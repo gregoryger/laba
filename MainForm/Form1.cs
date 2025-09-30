@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Logic;
 using Models;
-using Microsoft.VisualBasic; // для InputBox
+using Microsoft.VisualBasic;
 
 namespace GameApp.UI
 {

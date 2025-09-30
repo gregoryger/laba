@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Logic;
-using Models;
 
 namespace GameApp
 {
@@ -36,21 +35,27 @@ namespace GameApp
                 {
                     case 1:
                         AddGameConsole(logic);
+                        PauseAndClear();
                         break;
                     case 2:
                         ShowAllGames(logic);
+                        PauseAndClear();
                         break;
                     case 3:
                         UpdateGameConsole(logic);
+                        PauseAndClear();
                         break;
                     case 4:
                         DeleteGameConsole(logic);
+                        PauseAndClear();
                         break;
                     case 5:
                         FilterByGenreConsole(logic);
+                        PauseAndClear();
                         break;
                     case 6:
                         ShowTopRatedGames(logic);
+                        PauseAndClear();
                         break;
                     case 0:
                         exit = true;
@@ -59,6 +64,16 @@ namespace GameApp
                         break;
                 }
             }
+        }
+
+        /// <summary>
+        /// Пауза перед очисткой консоли.
+        /// </summary>
+        private static void PauseAndClear()
+        {
+            Console.WriteLine("\nНажмите любую клавишу для продолжения...");
+            Console.ReadKey();
+            Console.Clear();
         }
 
         // Метод для чтения и проверки ввода целого числа в диапазоне
